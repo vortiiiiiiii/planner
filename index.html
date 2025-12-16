@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planlayıcı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Planlayıcı</h1>
+
+  <!-- Ana Sayfa -->
+  <div id="home">
+    <div class="countdown">
+      <h2>KPSS</h2>
+      <div id="kpss-timer"></div>
+    </div>
+    <div class="countdown">
+      <h2>DGS</h2>
+      <div id="dgs-timer"></div>
+    </div>
+
+    <div class="home-buttons">
+      <button id="showWeeksBtn">Haftalık Plan</button>
+      <button id="showDerslerBtn">Dersler</button>
+    </div>
+  </div>
+
+  <!-- Haftalık Plan Sayfası -->
+  <div id="weeksPage" style="display:none;">
+    <button id="backFromWeeks">⬅ Geri</button>
+    <h2>Haftalık Plan</h2>
+
+    <div id="overview">
+      <button id="addWeekBtn">➕ Hafta ekle</button>
+      <div id="weeks" class="week-grid"></div>
+    </div>
+
+    <div id="detail" style="display:none;">
+      <button id="backBtn">⬅ Geri</button>
+      <h2 id="weekTitle"></h2>
+
+      <button id="addSubjectBtn">➕ Konu başlığı ekle</button>
+      <div id="subjects" class="subject-grid"></div>
+    </div>
+  </div>
+
+  <!-- Dersler Sayfası -->
+  <div id="derslerPage" style="display:none;">
+    <button id="backFromDersler">⬅ Geri</button>
+    <h2>Ders Konuları</h2>
+
+    <div class="ders-container">
+
+      <!-- Türkçe -->
+      <div class="ders">
+        <h3>Türkçe</h3>
+        <div class="konu"><div class="check-box"></div><span>Sözcükte Anlam</span></div>
+        <div class="konu"><div class="check-box"></div><span>Cümlede Anlam</span></div>
+        <div class="konu"><div class="check-box"></div><span>Paragrafta Anlam</span></div>
+        <div class="konu"><div class="check-box"></div><span>Noktalama İşaretleri</span></div>
+        <div class="konu"><div class="check-box"></div><span>Yapı Bilgisi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Ses Bilgisi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Sözcük Bilgisi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Cümle Bilgisi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Yazım Kuralları</span></div>
+        <div class="konu"><div class="check-box"></div><span>Anlatım Bozuklukları</span></div>
+        <div class="konu"><div class="check-box"></div><span>Sözel Mantık ve Akıl Yürütme</span></div>
+      </div>
+
+      <!-- Matematik -->
+      <div class="ders">
+        <h3>Matematik</h3>
+        <div class="konu"><div class="check-box"></div><span>Temel Kavramlar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Sayılar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Bölme ve Bölünebilme Kuralları</span></div>
+        <div class="konu"><div class="check-box"></div><span>Asal Çarpanlara Ayırma</span></div>
+        <div class="konu"><div class="check-box"></div><span>EBOB-EKOK</span></div>
+        <div class="konu"><div class="check-box"></div><span>Birinci Dereceden Denklemler</span></div>
+        <div class="konu"><div class="check-box"></div><span>Rasyonel Sayılar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Eşitsizlik</span></div>
+        <div class="konu"><div class="check-box"></div><span>Mutlak Değer</span></div>
+        <div class="konu"><div class="check-box"></div><span>Üslü Sayılar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Köklü Sayılar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Çarpanlara Ayırma</span></div>
+        <div class="konu"><div class="check-box"></div><span>Oran-Orantı</span></div>
+        <div class="konu"><div class="check-box"></div><span>Problemler</span></div>
+        <div class="konu"><div class="check-box"></div><span>Kümeler</span></div>
+        <div class="konu"><div class="check-box"></div><span>İşlem ve Modüler Aritmetik</span></div>
+        <div class="konu"><div class="check-box"></div><span>Permütasyon, Kombinasyon ve Olasılık</span></div>
+        <div class="konu"><div class="check-box"></div><span>Tablo ve Grafikler</span></div>
+      </div>
+
+      <!-- Tarih -->
+      <div class="ders">
+        <h3>Tarih</h3>
+        <div class="konu"><div class="check-box"></div><span>İslamiyet Öncesi Türk Tarihi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Türk-İslam Tarihi</span></div>
+        <div class="konu"><div class="check-box"></div><span>İlk Müslüman Türk Devletleri</span></div>
+        <div class="konu"><div class="check-box"></div><span>Anadolu Selçuklu Devleti Siyasi Tarihi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Osmanlı Devleti Kültür ve Medeniyeti</span></div>
+        <div class="konu"><div class="check-box"></div><span>Osmanlı Devleti Kuruluş, Yükselme, Duraklama Dönemleri</span></div>
+        <div class="konu"><div class="check-box"></div><span>Osmanlı Devleti Gerileme ve Dağılma Dönemleri</span></div>
+        <div class="konu"><div class="check-box"></div><span>Trablusgarp Savaşı (1911-1912)</span></div>
+        <div class="konu"><div class="check-box"></div><span>I. ve II. Balkan Savaşları</span></div>
+        <div class="konu"><div class="check-box"></div><span>I. Dünya Savaşı</span></div>
+        <div class="konu"><div class="check-box"></div><span>Kurtuluş Savaşına Hazırlık Dönemi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Kurtuluş Savaşı Muharebeler ve Antlaşmalar Dönemi</span></div>
+        <div class="konu"><div class="check-box"></div><span>Atatürk İlke ve İnkılapları</span></div>
+        <div class="konu"><div class="check-box"></div><span>Atatürk Dönemi Türk Dış Politikası</span></div>
+        <div class="konu"><div class="check-box"></div><span>Çağdaş Türk ve Dünya Tarihi</span></div>
+      </div>
+
+      <!-- Coğrafya -->
+      <div class="ders">
+        <h3>Coğrafya</h3>
+        <div class="konu"><div class="check-box"></div><span>Türkiye’nin Coğrafi Konumu ve Yer Şekilleri</span></div>
+        <div class="konu"><div class="check-box"></div><span>Türkiye’nin İklimi ve Bitki Örtüsü</span></div>
+        <div class="konu"><div class="check-box"></div><span>Türkiye’de Nüfus, Yerleşme ve Göç</span></div>
+        <div class="konu"><div class="check-box"></div><span>Türkiye’nin Ekonomik Coğrafyası</span></div>
+        <div class="konu"><div class="check-box"></div><span>Türkiye’nin Coğrafi Bölgeleri</span></div>
+      </div>
+
+      <!-- Vatandaşlık -->
+      <div class="ders">
+        <h3>Vatandaşlık</h3>
+        <div class="konu"><div class="check-box"></div><span>Hukukun Temel Kavramları</span></div>
+        <div class="konu"><div class="check-box"></div><span>Genel Esaslar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Temel Haklar</span></div>
+        <div class="konu"><div class="check-box"></div><span>Yasama</span></div>
+        <div class="konu"><div class="check-box"></div><span>Yürütme</span></div>
+        <div class="konu"><div class="check-box"></div><span>Yargı</span></div>
+        <div class="konu"><div class="check-box"></div><span>Anayasal Gelişmeler</span></div>
+        <div class="konu"><div class="check-box"></div><span>İdare Hukuku</span></div>
+        <div class="konu"><div class="check-box"></div><span>Uluslararası Örgütler</span></div>
+        <div class="konu"><div class="check-box"></div><span>Güncel Bilgiler</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
